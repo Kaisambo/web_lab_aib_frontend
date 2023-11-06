@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   height: 100%;
 }
@@ -21,3 +22,59 @@ button {
   background-color: Indigo;
   cursor: pointer;
 }
+=======
+h1 {
+    font-weight: normal;
+    font-size: 50px;
+    text-transform: uppercase; 
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0%;
+    padding-top: 45px;
+    color: white;
+}
+
+h2 {
+    color: white;
+    margin-top: auto;
+    margin-bottom: 35px;
+    font-size: 31px;
+    font-style: sans-serif;
+    text-transform: uppercase;
+    
+}
+h3 {
+    color: white;
+    font: 'Inter';
+    font-style: sans-serif;
+    font-size: 16px;
+    
+    font-weight: normal;
+    text-transform: uppercase; 
+    margin: 0px;
+}
+
+div{
+    margin: 0 auto 20px;
+    text-align: center;
+    background-color: deepskyblue ;
+    width: 500px;
+    height: 500px;
+}
+
+body {
+    text-align: center;
+    min-width: 850px;
+}
+
+img {
+    width: 210px;
+    margin-bottom: 80px;
+}
+
+p{
+    text-align: center;
+    margin: 0px;
+}
+
+>>>>>>> 6640abfc11acee83dc6baa99606f1815530da6c4
