@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+   let apple = 10;
+   let condition = "Stroka"
+   alert(apple);
+   console.log(apple);
+   console.log ('Goog game is ' + condition)
+
+
+
+   let a = 150;
+   let str = '100'; 
+   let bool = true;
+   console.log(a + str);
+   console.log(a + bool);
+   console.log(str + a);
+   console.log(str + bool);
+   console.log(bool + a);
+   console.log(bool + str);
+
+    const randomInteger = (min, max) => {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+    }
+
+    let arr = [];
+    for( let i = 0; i < 10; i++){
+        arr[i] = randomInteger(-10, 20);
+    }
+    console.log(arr);
+
+    function fil(i){
+        return i >= 0;
+    }
+    
+    console.log(arr.filter(fil))
+
+    function RandFunc() {
+    return Math.floor(Math.random() * 100);
+    }
+    console.log(RandFunc());
+
+    let ab = 2;
+    let arr1 = [1, 2, 4, 7];
+    
+    function arrMultiply(arr, multiply){
+        let arr2 = [];
+        for(let i = 0; i < arr.length; i++){
+            arr2[i] = arr[i] * multiply;
+        }
+        return arr2;
+    }
+    console.log(arrMultiply(arr1, ab));
+
+
+    const randomSTR = () => {
+        return Math.random().toString(36).substring(2, 10);
+    }
+    console.log(randomSTR());
+
+
+    let Person = { 
+        firstName: 'Ivan', 
+        surname: 'Pupkin',
+        patronymic: 'Nikitich',
+        birthday: '13.04.2003',
+        hobby: 'hobbyHorsing',
+        group: 'engeneers', 
+        vyvod: function () {
+            let a =  'Имя - ' + this.firstName + '\n' + 'Фамилия - ' + this.surname + '\n' + 'Отчество - ' + this.patronymic + '\n' + 'День рождения - ' + this.birthday + '\n' + 'Возраст - ' + (2023 - 2003); 
+            return a;
+        }
+    }
+    alert(Person.vyvod());
+
+
+    let Salary = {
+        Pupkin: 10000,
+        Ali: 15000,
+        Zhukov: 3000,
+        Shelyapin: 2500,
+        Bezzubenko: 12400,
+        Ivanov: 1000, 
+        Petrov: 900,
+        Coi: 1390,
+        Serybryakov: 10,
+        Ben_Laden: 10000,
+        salaryCount: function () {
+            let AllSal = 'All salary = ' +  (this.Ben_Laden + this.Bezzubenko + this.Coi + this.Ivanov + this.Petrov + this.Pupkin + this.Serybryakov + this.Shelyapin + this.Zhukov); 
+            return(AllSal);
+        } 
+    }
+    console.log(Salary.salaryCount());
+
+
+</script>
+</body>
+</html>
