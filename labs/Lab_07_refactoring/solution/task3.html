@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+
+var count = prompt('Введите кол-во человек ', undefined);
+
+if (!isNaN(parseFloat(count))){
+    count = parseFloat(count)
+}
+else {
+    count = 0; }
+
+while(count === 0) { 
+    var count = prompt('Введите кол-во человек ', undefined);
+    if (!isNaN(parseFloat(count))) {
+        count = parseFloat(count)        
+    } 
+    else {
+        count = 0; }
+}
+
+var salary = prompt('Введите зарплату на человека ', undefined);
+
+if (!isNaN(parseFloat(salary))) {
+    salary = parseFloat(salary);
+}
+else {
+    k = 0; }
+
+while(salary === 0) {
+    var salary = prompt('Введите зарплату на человека ', undefined);
+    if (!isNaN(parseFloat(k))) {
+        salary = parseFloat(k)
+    } else {
+        k = 0;
+    }
+}
+alert('Затраты на ЗП = ' + count * salary);
+
+</script>
+</body>
+</html>

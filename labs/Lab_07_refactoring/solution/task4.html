@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+
+let klassSoStudentami = [
+    {FIO:'Петров А.А.',Ocenka: 5},
+    {FIO:'Иванов Б.Б.',Ocenka: 3.4},
+    {FIO:'Сидоров Г.Г.',Ocenka: 9},
+    {FIO:'Немолодой Д.Д',Ocenka: 2},
+    {FIO:'Молодой Е.Е',Ocenka: 3.4}];
+
+let s = 0;
+let kolichectvo = 0;
+let ploxieStudenti = [];
+
+for(let PoryadkoviyNomer = 0; PoryadkoviyNomer < klassSoStudentami.length; PoryadkoviyNomer++) {
+    if (klassSoStudentami[PoryadkoviyNomer].Ocenka > 5){
+        console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
+    } 
+    if (klassSoStudentami[PoryadkoviyNomer].Ocenka < 0) {
+        console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
+    }
+    if (!(klassSoStudentami[PoryadkoviyNomer].Ocenka <= 5&&klassSoStudentami[PoryadkoviyNomer].Ocenka >= 0)) {
+        continue;
+    }
+    if (klassSoStudentami[PoryadkoviyNomer].Ocenka < 4) {
+        ploxieStudenti.push(klassSoStudentami[PoryadkoviyNomer]); 
+        s += klassSoStudentami[PoryadkoviyNomer].Ocenka;
+        kolichectvo++;
+    }
+}
+s = s / kolichectvo;
+
+console.log('Средняя оценка: ' + s);
+console.log('Плохие студенты:');
+
+if(ploxieStudenti.length === 0) {
+    console.log('Таких нет');
+}
+ploxieStudenti.forEach((znachenie)=>{
+    console.log('Фио: '+ znachenie.FIO + '; Оценка: ' + znachenie.Ocenka)});
+
+</script>
+</body>
+</html>

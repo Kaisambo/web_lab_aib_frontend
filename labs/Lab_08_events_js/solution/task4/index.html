@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="./assets/js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <title>JS</title>
+</head>
+<body id = "main">
+    <div class="GenSpace" id = "GenSpace">
+        <div class="SpaceItem">
+        </div>
+    </div>
+    <div id= "DIV1">
+        <input class = "input" id = "input1" oninput="changeColor()" type = 'number'>
+            <label>
+                Red
+            </label>
+        </div> 
+    </div>
+    <div id = "DIV2">
+        <input class = "input" id = "input2" oninput="changeColor()" type = 'number'>
+        <label>
+            Green
+        </label>
+        </div> 
+    </div>
+    <div id = "DIV3">
+        <input class = "input"  id = "input3" oninput="changeColor()" type = 'number'>
+        <label>
+            Blue
+        </label>
+        </div> 
+    </div>
+    <button class="button1" onclick="GenFunc()">
+        <a>
+            Сгенерировать
+        </a>
+    </button>
+    <div class = "square" id = "Square" >
+    </div>
+</body>
+</html>
