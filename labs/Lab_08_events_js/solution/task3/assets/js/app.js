@@ -1,35 +1,55 @@
-let arrRGB = [0, 0, 0];
+document.addEventListener("DOMContentLoaded", function() {
+  const colorArea = document.getElementById("color-area");
+  const redInput = document.getElementById("red");
+  const greenInput = document.getElementById("green");
+  const blueInput = document.getElementById("blue");
+  const generator = document.getElementById("generator");
+  const block = document.getElementById("block");
+  const maxBlocks = 15;
 
-function changeColor(){
-  if (document.getElementById('input1').value == ''){
-    arrRGB[0] = 0;
-  }
-  else {
-    arrRGB[0] = document.getElementById('input1').value;
-  }
-  if (document.getElementById('input2').value == ''){
-    arrRGB[1] = 0;
-  }
-  else {
-    arrRGB[1] = document.getElementById('input2').value;
-  }
-  if (document.getElementById('input3').value == ''){
-    arrRGB[2] = 0;
-  }
-  else {
-    arrRGB[2] = document.getElementById('input3').value;
-  }
-  document.getElementById('Square').style.backgroundColor = "rgb(" + arrRGB[0] + ", " + arrRGB[1] + ", " + arrRGB[2] + ")";
-}
+  function isValidNumber(colorInt)
+  {
 
+    if (colorInt>255 ){
+      alert("Код цвета не должен превышать 255!")
+      return false;
+    }
+  return true;
+  }
 
-function GenFunc() {
-    console.log("rgb(" + arrRGB[0] + ", " + arrRGB[1] + ", " + arrRGB[2] + ")");
-    var div = document.createElement('div');
-    div.style.color = "rgb(" + arrRGB[0] + ", " + arrRGB[1] + ", " + arrRGB[2] + ")";
-    div.style.height = "95%";
-    div.style.width = "15%";
-    div.style.margin = "5px"
-    document.getElementById("GenSpace").appendChild(div);
-}
+  function changeColor() {
 
+      const red = parseInt(redInput.value) || 0;
+      const green = parseInt(greenInput.value) || 0;
+      const blue = parseInt(blueInput.value) || 0;
+
+      if (isValidNumber(red) && isValidNumber(green) && isValidNumber(blue)){
+         colorArea.style.backgroundColor = 
+         `rgb(${red}, ${green}, ${blue})`;
+      }
+    }
+
+  redInput.addEventListener("input", changeColor);
+  greenInput.addEventListener("input", changeColor);
+  blueInput.addEventListener("input", changeColor);
+
+  generator.addEventListener("click", function() {
+      const red = parseInt(redInput.value) || 0;
+      const green = parseInt(greenInput.value) || 0;
+      const blue = parseInt(blueInput.value) || 0;
+
+      if (isValidNumber(red) && 
+      isValidNumber(green) && 
+      isValidNumber(blue)) {
+        const color = `rgb(${red}, ${green}, ${blue})`;
+        const spaceItem = document.createElement("div");
+        spaceItem.classList.add("spaceItem");
+        spaceItem.style.backgroundColor = color;
+        block.appendChild(spaceItem);
+  
+        if (block.children.length > maxBlocks) {
+              block.removeChild(block.firstElementChild);
+        }
+      }
+  });
+});

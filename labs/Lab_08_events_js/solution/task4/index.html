@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JC</title>
     <script src="./assets/js/app.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <title>JS</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
-<body id = "main">
-    <div class="GenSpace" id = "GenSpace">
-        <div class="SpaceItem">
+<body>
+    <div class = "GenSpace" id="block" >
+    </div>
+        <div class = "input">
+            <label for="red">Red:</label>
+            <input type="text" id="red" name="red" maxlength="3">
         </div>
-    </div>
-    <div id= "DIV1">
-        <input class = "input" id = "input1" oninput="changeColor()" type = 'number'>
-            <label>
-                Red
-            </label>
-        </div> 
-    </div>
-    <div id = "DIV2">
-        <input class = "input" id = "input2" oninput="changeColor()" type = 'number'>
-        <label>
-            Green
-        </label>
-        </div> 
-    </div>
-    <div id = "DIV3">
-        <input class = "input"  id = "input3" oninput="changeColor()" type = 'number'>
-        <label>
-            Blue
-        </label>
-        </div> 
-    </div>
-    <button class="button1" onclick="GenFunc()">
-        <a>
-            Сгенерировать
-        </a>
-    </button>
-    <div class = "square" id = "Square" >
-    </div>
+        <div class = "input">
+            <label for="green">Green:</label>
+            <input type="text" id="green" name="green" maxlength="3">
+        </div>
+        <div class = "input">
+            <label for="blue">Blue:</label>
+            <input type="text" id="blue" name="blue" maxlength="3">
+        </div>
+        <div>
+            <button class = "button1" id = "generator">
+                Сгенерировать
+            </button>
+        </div>
+
+        <div class = "square" id="color-area">
+        </div>
 </body>
 </html>
